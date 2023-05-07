@@ -26,7 +26,7 @@ function onSearch(event) {
   event.preventDefault();
   loadMoreBtn.hide();
   refs.gallery.innerHTML = '';
-  imagesServiceAPI.query = e.currentTarget.elements.searchQuery.value;
+  imagesServiceAPI.query = event.currentTarget.elements.searchQuery.value;
 
   if (imagesServiceAPI.query.trim() === '') {
     Notify.info('Please, fill out input field by your query!');
